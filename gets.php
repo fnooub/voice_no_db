@@ -11,7 +11,7 @@ $str = single_curl(base_url('set.php?flag=' . $flag . '&link=' . $link));
 
 $data = json_decode($str, true);
 
-for ($i = $s; $i < $e; $i++) {
+for ($i = $s; $i <= $e; $i++) {
 	$urls[] = base_url('get.php?flag=' . $flag . '&link=') . $data[$i];
 }
 
