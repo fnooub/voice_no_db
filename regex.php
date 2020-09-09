@@ -1,5 +1,7 @@
 <?php
 
+include "functions.php";
+
 // ghi du lieu
 if (isset($_POST['s']) && isset($_POST['r'])) {
 	// s khong rong
@@ -70,7 +72,7 @@ function insert($file = 'data.json', array $array)
 	<input type="radio" name="flag" value="td"> <b>/tđ</b>
 	<input type="submit" name="submit" value="Replace">
 </form>
-<p><a href="?xoa=all" onclick = "if (! confirm('Xoá?')) { return false; }">Xoá code</a></p>
+<p><a href="?xoa=all" onclick = "if (! confirm('Xoá?')) { return false; }">Xoá code</a> | <a href="<?= base_url() ?>">Index</a></p>
 <hr>
 <div style="white-space: nowrap;overflow: auto;">
 <?php
