@@ -21,7 +21,7 @@ $noidung = '';
 // metruyenchu
 if ($flag == 'mtc') {
 	$tieude = get_row('<div class="h1 mb-4 font-weight-normal nh-read__title">', '</div>', $str);
-	$noidung = get_row('<div class="nh-read__content.+?>', '</div>\s*<div class="d-flex', $str, false);
+	$noidung = get_row('<div class="nh-read__content.+?>', '</div>\s*<div', $str, false);
 }
 // tang thu vien
 elseif ($flag == 'ttv') {
