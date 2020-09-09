@@ -6,12 +6,13 @@ $link = get_var('link');
 $flag = get_var('flag');
 $s = get_var('s');
 $e = get_var('e');
+$c = isset($_GET['c']) ? '&c=' . $_GET['c'] : null;
 
-$str = single_curl(base_url('set.php?flag=' . $flag . '&link=' . $link));
+$str = single_curl(base_url('set.php?flag=' . $flag . '&link=' . $link . $c));
 
 $data = json_decode($str, true);
 
-for ($i = $s; $i <= $e; $i++) {
+for ($i = ($s-1); $i < $e; $i++) {
 	$urls[] = base_url('get.php?flag=' . $flag . '&link=') . $data[$i];
 }
 
