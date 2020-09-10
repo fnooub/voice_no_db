@@ -69,7 +69,7 @@ elseif ($flag == 'tf') {
 elseif ($flag == 'tcv') {
 	$soChuong = isset($_GET['c']) ? $_GET['c'] : 1000;
 	for ($i = 1; $i <= $soChuong; $i++) {
-		$data[] = $link . 'chuong-' . $i;
+		$data[] = $link . 'chuong-' . $i . '/';
 	}
 }
 
